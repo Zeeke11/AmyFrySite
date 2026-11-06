@@ -9,7 +9,7 @@
  * Paste your Web3Forms Access Key below (from https://web3forms.com):
  * =========================================================================
  */
-export const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+export const WEB3FORMS_ACCESS_KEY = "5c576edd-db14-45a3-a6ca-96600a962ed4";
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
