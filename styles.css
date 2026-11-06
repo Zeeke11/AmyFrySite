@@ -1,0 +1,244 @@
+/* 
+   Skin Reversal Skincare Clinic - Custom Stylesheet
+   Luxury Aesthetic: Soft Creams, Sage Greens, Warm Slate Grays, Muted Gold
+*/
+
+/* --- GOOGLE FONTS IMPORT --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* --- CUSTOM ROOT VARIABLES --- */
+:root {
+  --color-cream: #FFF0F2;
+  --color-sage: #7D8C76;
+  --color-sage-light: #E8EBE6;
+  --color-sage-dark: #5C6A56;
+  --color-charcoal: #1C1F1D;
+  --color-slate-gray: #4E534F;
+  --color-gold: #FFB6C1;
+  --color-gold-dark: #D38496;
+}
+
+/* --- BASE STYLES --- */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-cream);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- TYPOGRAPHY UTILITIES --- */
+h1, h2, h3, h4, h5, h6, .font-serif-luxury {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.02em;
+}
+
+p, span, a, button, input, textarea, select, .font-sans-luxury {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* --- PREMIUM SCROLLBAR --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: #E8D3D7;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage);
+}
+
+/* --- FROSTED GLASS EFFECT --- */
+.glass-nav {
+  background-color: rgba(255, 240, 242, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 182, 193, 0.15);
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(125, 140, 118, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 182, 193, 0.4);
+  box-shadow: 0 12px 30px rgba(78, 83, 79, 0.05);
+}
+
+/* --- ELEGANT BUTTONS --- */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-gold);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-gold:hover {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  transform: translateY(-1px);
+}
+
+.btn-outline-sage {
+  border: 1px solid var(--color-sage);
+  color: var(--color-charcoal);
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-outline-sage:hover {
+  background-color: var(--color-sage);
+  color: #ffffff;
+  border-color: var(--color-sage);
+  transform: translateY(-1px);
+}
+
+/* --- ACTIVE LINK ANIMATION --- */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-gold);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-charcoal);
+}
+
+/* --- SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) --- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delay modifiers for sequenced reveals */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* --- HERO TEXT GRADIENT (SUBTLE) --- */
+.gradient-text-gold {
+  background: linear-gradient(135deg, var(--color-charcoal) 60%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- TESTIMONIALS SLIDER UTILITIES --- */
+.testimonial-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+  display: block;
+  opacity: 1;
+  animation: fadeInTestimonial 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInTestimonial {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- IMAGE PLACEHOLDER PRESENTATION --- */
+.image-placeholder-visual {
+  background-color: var(--color-sage-light);
+  border: 1px dashed rgba(125, 140, 118, 0.4);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.image-placeholder-visual:hover {
+  background-color: #E0E4DC;
+  border-color: var(--color-gold);
+}
+
+.image-placeholder-visual::before {
+  content: '✦';
+  font-size: 1.5rem;
+  color: var(--color-gold);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

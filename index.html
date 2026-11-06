@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skin Reversal | Premium Skincare Clinic & Skin Longevity Spa</title>
+  <meta name="description"
+    content="Restore your skin's natural vitality at Skin Reversal. Offering luxury lashes & brows, advanced body treatments, hydro facials, and scalp rejuvenation.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FFF0F2',
+              sage: '#7D8C76',
+              'sage-light': '#E8EBE6',
+              'sage-dark': '#5C6A56',
+              charcoal: '#1C1F1D',
+              slate: '#4E534F',
+              gold: '#FFB6C1',
+              'gold-dark': '#D38496'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal flex flex-col min-h-screen">
+
+  <!-- --- NAVIGATION BAR --- -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2 group" id="nav-logo">
+        <span
+          class="text-2xl font-serif text-brand-charcoal tracking-[0.2em] font-medium transition duration-300 group-hover:text-brand-sage">SKIN
+          REVERSAL</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" class="nav-link text-brand-slate py-1" id="link-home">Home</a>
+        <a href="about.html" class="nav-link text-brand-slate py-1" id="link-about">About</a>
+        <a href="services.html" class="nav-link text-brand-slate py-1" id="link-services">Services</a>
+        <a href="partnership.html" class="nav-link text-brand-slate py-1" id="link-partnership">Postiche Beauty</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="hidden md:flex items-center space-x-6">
+        <!-- Call Receptionist Link -->
+        <a href="tel:+12179941048"
+          class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300"
+          id="header-phone-cta">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+            </path>
+          </svg>
+          Give us a call
+        </a>
+        <!-- Facebook Link -->
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer"
+          class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300 group"
+          id="header-facebook-cta" title="Visit Skin Reversal on Facebook" aria-label="Visit Skin Reversal on Facebook">
+          <svg class="w-4 h-4 fill-current text-brand-sage group-hover:text-brand-gold transition duration-300"
+            viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+        <a href="book.html" class="btn-gold py-3 px-6 text-xs transition duration-300 font-semibold"
+          id="header-book-cta">Book Consultation</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden flex items-center p-2 text-brand-charcoal focus:outline-none" id="mobile-menu-btn"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden flex-col bg-brand-cream border-t border-brand-gold/10 px-6 py-6 space-y-4 shadow-inner"
+      id="mobile-menu">
+      <a href="index.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Home</a>
+      <a href="about.html"
+        class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">About</a>
+      <a href="services.html"
+        class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Services</a>
+      <a href="partnership.html"
+        class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Postiche Beauty</a>
+      <div class="pt-4 border-t border-brand-gold/10 flex flex-col space-y-4">
+        <a href="tel:+12179941048"
+          class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+            </path>
+          </svg>
+          Call Our Receptionist
+        </a>
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer"
+          class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300">
+          <svg class="w-4 h-4 mr-2 text-brand-sage fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+          Facebook Page
+        </a>
+        <a href="book.html" class="btn-gold py-3 text-center text-xs w-full">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- --- HERO SECTION --- -->
+    <section class="relative pt-12 pb-24 md:py-32 overflow-hidden" id="hero">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Hero Text -->
+        <div class="lg:col-span-6 space-y-8 reveal-left">
+          <div
+            class="flex items-center space-x-2 text-xs tracking-[0.2em] text-brand-gold uppercase font-medium flex-wrap gap-y-2">
+            <span>Clinical Skincare</span>
+            <span>✦</span>
+            <span>Scalp Wellness</span>
+            <span>✦</span>
+            <span>Oncology Friendly</span>
+            <span>✦</span>
+            <span class="text-brand-sage font-bold">Free Consultations</span>
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-light leading-[1.1] text-brand-charcoal">
+            Restoring your skin's <br>
+            <span class="italic font-normal text-brand-sage">natural intelligence.</span>
+          </h1>
+
+          <p class="text-brand-slate text-base md:text-lg max-w-lg leading-relaxed font-light">
+            We offer advanced clinical skincare, oncology-friendly treatments, and custom hair solutions. Schedule a
+            free consultation to start your journey.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+            <a href="book.html"
+              class="btn-gold py-4 px-8 text-xs text-center transition duration-300 font-semibold tracking-[0.15em]"
+              id="hero-book-cta">
+              Schedule Free Consultation
+            </a>
+            <a href="tel:+12179941048"
+              class="btn-outline-sage py-4 px-8 text-xs text-center transition duration-300 font-semibold tracking-[0.15em] flex items-center justify-center space-x-2"
+              id="hero-phone-cta">
+              <svg class="w-4 h-4 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                </path>
+              </svg>
+              <span>Call Receptionist</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Images Layout (Luxury Editorial Frame) -->
+        <div class="lg:col-span-6 relative mt-8 lg:mt-0 reveal-right delay-200">
+
+          <!-- Decorative subtle elements -->
+          <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-brand-sage-light/40 blur-3xl z-0"></div>
+          <div class="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-brand-gold/10 blur-3xl z-0"></div>
+
+          <!-- Main offset frame -->
+          <div class="relative z-10 grid grid-cols-12 gap-4">
+
+            <div class="col-span-8">
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/10 rounded-sm">
+                <img src="images/spa_treatment_room.jpg" alt="Skin Reversal clinical spa treatment room"
+                  class="w-full h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent opacity-60">
+                </div>
+                <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                  <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Clinic
+                    Experience</span>
+                  <span class="text-lg font-serif italic tracking-wide font-light">Dermal Harmony</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-4 flex flex-col justify-end">
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/10 rounded-sm mb-6">
+                <img src="images/skincare_products.jpg" alt="Elegant botanical skincare products on a gold tray"
+                  class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent opacity-65">
+                </div>
+                <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                  <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Our
+                    Formula</span>
+                  <span class="text-sm font-serif italic tracking-wide font-light">Botanicals</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- CORE SERVICES OVERVIEW --- -->
+    <section class="py-24 bg-brand-sage-light/30 border-y border-brand-gold/10" id="core-services">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <h2 class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold mb-3">Our Offerings</h2>
+          <p class="text-4xl font-light text-brand-charcoal font-serif">Curated Skincare & Wellness Treatments</p>
+          <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <!-- Service Card 1 -->
+          <div class="glass-card p-6 flex flex-col justify-between h-full reveal-on-scroll delay-100"
+            id="service-card-facials">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-48 w-full mb-6 group">
+                <img src="images/spa_treatment_room.jpg" alt="Clinical Facials and O2 Hydrofacials treatment suite"
+                  class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-xl font-serif text-brand-charcoal mb-3">Facials & O2 Hydrofacials</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed mb-6">
+                Customized facials, dermaplaning, Oxygen RX, Carboxy masks, and O2 Hydrofacials tailored specifically to
+                your skin needs.
+              </p>
+            </div>
+            <a href="services.html#facials"
+              class="text-xs tracking-widest uppercase font-semibold text-brand-gold hover:text-brand-sage transition duration-300 mt-auto flex items-center space-x-1">
+              <span>Explore Facials Menu</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="glass-card p-6 flex flex-col justify-between h-full reveal-on-scroll delay-200"
+            id="service-card-body">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-48 w-full mb-6 group">
+                <img src="images/body_treatments.jpg" alt="Luxury body care treatments setting"
+                  class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-xl font-serif text-brand-charcoal mb-3">Detox Saunas & Salt Cabin</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed mb-6">
+                Infrared saunas, halotherapy salt cabins, ionic foot detox baths, back facials, and manual lymphatic
+                drainage.
+              </p>
+            </div>
+            <a href="services.html#body-treatments"
+              class="text-xs tracking-widest uppercase font-semibold text-brand-gold hover:text-brand-sage transition duration-300 mt-auto flex items-center space-x-1">
+              <span>Explore Detox Treatments</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="glass-card p-6 flex flex-col justify-between h-full reveal-on-scroll delay-300"
+            id="service-card-lashes">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-48 w-full mb-6 group">
+                <img src="images/lashes_brows.jpg" alt="Luxury eyelashes and brows"
+                  class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-xl font-serif text-brand-charcoal mb-3">Lashes & Brows</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed mb-6">
+                Precision symmetry mapping, waxing, botanical tinting, brow laminations, and keratin lash lifts to frame
+                your features.
+              </p>
+            </div>
+            <a href="services.html#lashes-brows"
+              class="text-xs tracking-widest uppercase font-semibold text-brand-gold hover:text-brand-sage transition duration-300 mt-auto flex items-center space-x-1">
+              <span>Explore Brows & Lashes</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="glass-card p-6 flex flex-col justify-between h-full reveal-on-scroll delay-400"
+            id="service-card-advanced">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-48 w-full mb-6 group">
+                <img src="images/advanced_skincare.jpg" alt="Advanced skincare and scalp treatments"
+                  class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-xl font-serif text-brand-charcoal mb-3">Scalp & Advanced Skincare</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed mb-6">
+                Keravive hair follicle rejuvenation, Wet Tip diamond microdermabrasion, and custom Postiche Beauty hair
+                solutions.
+              </p>
+            </div>
+            <a href="services.html#facials"
+              class="text-xs tracking-widest uppercase font-semibold text-brand-gold hover:text-brand-sage transition duration-300 mt-auto flex items-center space-x-1">
+              <span>Explore Advanced Care</span>
+              <span>→</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- WHY CHOOSE US --- -->
+    <section class="py-24" id="why-choose-us">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+          <!-- Narrative Left -->
+          <div class="lg:col-span-5 space-y-6 reveal-left">
+            <h2 class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">The Skin Reversal Ethos</h2>
+            <h3 class="text-4xl font-light font-serif text-brand-charcoal leading-tight">Clinical skincare treatments w/
+              spa & wellness relaxation.</h3>
+            <p class="text-brand-slate text-sm font-light leading-relaxed">
+              Founded in 2020, we focus on skin and tissue health from the cellular level upward. Our treatments are
+              customized with a blend of medical grade, natural, professional grade, & skincare wellness for the very
+              best results.
+            </p>
+
+            <div class="pt-4 border-t border-brand-gold/10">
+              <div class="flex items-center space-x-4">
+                <span class="text-4xl font-serif font-light text-brand-sage">99%</span>
+                <span class="text-xs tracking-wider text-brand-slate uppercase font-medium">Guest Satisfaction & Dermal
+                  Improvement Score</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Grid Right -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 reveal-right delay-200">
+
+            <!-- Item 1 -->
+            <div class="p-6 bg-brand-sage-light/20 border border-brand-gold/5 space-y-3">
+              <span class="text-xl text-brand-gold">✦</span>
+              <h4 class="text-lg font-serif font-medium text-brand-charcoal">Barrier & Tissue Health</h4>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Supervised by licensed estheticians focusing on skin barrier restoration, tissue healing, and cellular
+                longevity.
+              </p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="p-6 bg-brand-sage-light/20 border border-brand-gold/5 space-y-3">
+              <span class="text-xl text-brand-gold">✦</span>
+              <h4 class="text-lg font-serif font-medium text-brand-charcoal">Customized Formulation Blend</h4>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Bespoke integration of medical grade, natural, and professional grade compounds tailored specifically to
+                your skin needs.
+              </p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="p-6 bg-brand-sage-light/20 border border-brand-gold/5 space-y-3">
+              <span class="text-xl text-brand-gold">✦</span>
+              <h4 class="text-lg font-serif font-medium text-brand-charcoal">Toppers, Setups & Scalp Focus</h4>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Through our Postiche Beauty partnership, we offer custom toppers, setups, and scalp treatments to
+                complete your look.
+              </p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="p-6 bg-brand-sage-light/20 border border-brand-gold/5 space-y-3">
+              <span class="text-xl text-brand-gold">✦</span>
+              <h4 class="text-lg font-serif font-medium text-brand-charcoal">Private Fitting Lounges</h4>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Enjoy complete privacy and high-end hospitality in our dedicated consultation suites.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- PORTRAIT / DUAL TEXTURE PARALLAX BANNER (POSTICHE PARTNERSHIP TEASER) --- -->
+    <section class="py-20 bg-brand-charcoal text-brand-cream relative overflow-hidden" id="partnership-teaser">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <!-- Image Left -->
+          <div class="lg:col-span-5 reveal-left">
+            <div class="relative overflow-hidden group shadow-lg border border-brand-gold/25 rounded-sm">
+              <img src="images/postiche_collage.jpg" alt="Postiche Beauty wigs, toppers and skincare products display"
+                class="w-full h-80 lg:h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent opacity-70">
+              </div>
+              <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                <span class="text-xs uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Postiche
+                  Partnership</span>
+                <span class="text-lg font-serif italic tracking-wide font-light">The Art of Hair Restoration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Right -->
+          <div class="lg:col-span-7 space-y-6 reveal-right delay-200">
+            <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">An Exclusive Alliance</span>
+            <h2 class="text-4xl lg:text-5xl font-light font-serif leading-tight">Skin Reversal × Postiche Beauty</h2>
+            <p class="text-gray-300 text-sm font-light leading-relaxed">
+              We partner with **Postiche Beauty** to provide custom lightweight wigs, hair toppers, and full setups.
+              Tailored in private suites, our scalp therapies and custom pieces blend seamlessly to restore your
+              confidence.
+            </p>
+            <div class="pt-4">
+              <a href="partnership.html"
+                class="inline-block border-b border-brand-gold text-brand-gold pb-1 text-xs uppercase tracking-widest font-semibold hover:text-brand-cream hover:border-brand-cream transition duration-300">
+                Explore the Postiche Beauty Collection & Packages →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --- THE LOUNGE BOUTIQUE & TIMELESS ACCENTS --- -->
+    <section class="py-24 bg-brand-cream border-t border-brand-gold/10" id="lounge-boutique">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold mb-3">Lounge Curation</span>
+          <h2 class="text-4xl font-light text-brand-charcoal font-serif">The Boutique & Sensory Luxuries</h2>
+          <p class="text-brand-slate text-sm font-light mt-4 leading-relaxed">
+            Hand-selected tactile luxuries and custom accessories to elevate your everyday self-care routine.
+          </p>
+          <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Boutique Item 1: Minky Blankets -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-brand-sage-light/20 border border-brand-gold/10 p-6 rounded-sm shadow-sm group">
+            <div class="md:col-span-5 relative overflow-hidden rounded-sm shadow-sm">
+              <img src="images/minky_blankets.jpg" alt="Luxury textured plush minky blankets in spa"
+                class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+            </div>
+            <div class="md:col-span-7 space-y-4">
+              <span class="text-[10px] tracking-widest text-brand-gold uppercase font-bold">Tactile Serenity</span>
+              <h3 class="text-2xl font-serif text-brand-charcoal">Boutique Minky Blankets</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Experience ultimate comfort. Wrap yourself in our double-sided plush blankets during treatments, also
+                available for purchase.
+              </p>
+              <a href="services.html#lounge-boutique-services"
+                class="inline-block border-b border-brand-gold/40 text-brand-gold pb-0.5 text-xs uppercase tracking-widest font-semibold hover:text-brand-sage hover:border-brand-sage transition duration-300">
+                Explore Blanket Curation →
+              </a>
+            </div>
+          </div>
+
+          <!-- Boutique Item 2: Permanent Jewelry -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-brand-sage-light/20 border border-brand-gold/10 p-6 rounded-sm shadow-sm group">
+            <div class="md:col-span-5 relative overflow-hidden rounded-sm shadow-sm">
+              <img src="images/permanent_jewelry.jpg" alt="Custom micro-welded gold permanent jewelry"
+                class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+            </div>
+            <div class="md:col-span-7 space-y-4">
+              <span class="text-[10px] tracking-widest text-brand-gold uppercase font-bold">Timeless Bonds</span>
+              <h3 class="text-2xl font-serif text-brand-charcoal">Spark Synergy Jewelry</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Fine 14k gold, rose gold, and sterling silver chains, custom-fitted and micro-welded clasp-free in our
+                private lounge.
+              </p>
+              <a href="services.html#lounge-boutique-services"
+                class="inline-block border-b border-brand-gold/40 text-brand-gold pb-0.5 text-xs uppercase tracking-widest font-semibold hover:text-brand-sage hover:border-brand-sage transition duration-300">
+                Explore Spark Options →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- DYNAMIC TESTIMONIALS SLIDER --- -->
+    <section class="py-24 bg-brand-cream border-b border-brand-gold/15" id="testimonials">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <div class="mb-12">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 border border-brand-gold/30 shadow-sm mb-4">
+            <!-- Google G Icon -->
+            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.03h3.88c2.28-2.09 3.66-5.17 3.66-9.12z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.03c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.13C3.26 21.36 7.34 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.13z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.13c.95-2.83 3.6-4.96 6.72-4.96z"/>
+            </svg>
+            <span class="text-xs font-semibold tracking-wider text-brand-charcoal uppercase">5.0 Star Rating • Google Verified Reviews</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-serif font-light text-brand-charcoal">Real Client Experiences</h2>
+          <p class="text-xs md:text-sm tracking-[0.2em] text-brand-slate uppercase font-medium mt-2">Skin Reversal Wellness Spa • Vandalia, Illinois</p>
+        </div>
+
+        <div class="relative min-h-[260px] flex items-center justify-center">
+
+          <!-- Review 1 - Nicolette Rikli -->
+          <div class="testimonial-slide active space-y-6">
+            <div class="flex justify-center items-center gap-1 text-amber-400 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-serif font-light italic leading-relaxed text-brand-charcoal max-w-3xl mx-auto">
+              “I had an absolutely wonderful experience during my facial today. From the moment I walked in, the environment was clean, calming, and welcoming. Paityn was knowledgeable and took the time to assess my skin concerns before beginning the treatment. She customized the facial to address my specific needs. My skin felt deeply cleansed, hydrated, and noticeably brighter afterward. I appreciated the attention to detail and the relaxing atmosphere — it truly felt like both a treatment and self-care. I will definitely be returning and highly recommend booking if you’re looking for visible results and a professional experience.”
+            </blockquote>
+            <div>
+              <p class="text-sm font-medium tracking-wide uppercase text-brand-charcoal">Nicolette Rikli</p>
+              <p class="text-xs tracking-wider text-brand-slate font-light mt-1">Google Review • Vandalia, IL</p>
+            </div>
+          </div>
+
+          <!-- Review 2 - Dana Holshouser -->
+          <div class="testimonial-slide space-y-6">
+            <div class="flex justify-center items-center gap-1 text-amber-400 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-serif font-light italic leading-relaxed text-brand-charcoal max-w-3xl mx-auto">
+              “Amy is very knowledgeable and does a wonderful job! It’s a very relaxing setting with many options to make the best spa experience!”
+            </blockquote>
+            <div>
+              <p class="text-sm font-medium tracking-wide uppercase text-brand-charcoal">Dana Holshouser</p>
+              <p class="text-xs tracking-wider text-brand-slate font-light mt-1">Google Review • Vandalia, IL</p>
+            </div>
+          </div>
+
+          <!-- Review 3 - Cindy D -->
+          <div class="testimonial-slide space-y-6">
+            <div class="flex justify-center items-center gap-1 text-amber-400 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-serif font-light italic leading-relaxed text-brand-charcoal max-w-3xl mx-auto">
+              “I frequently visit Skin Reversal Salon for facials, absolutely love the way my skin feels. I have also used the Salt booth, awesome experience, and very relaxing. Everyone is very professional.”
+            </blockquote>
+            <div>
+              <p class="text-sm font-medium tracking-wide uppercase text-brand-charcoal">Cindy D.</p>
+              <p class="text-xs tracking-wider text-brand-slate font-light mt-1">Google Review • Vandalia, IL</p>
+            </div>
+          </div>
+
+          <!-- Review 4 - Natalie Gutierrez -->
+          <div class="testimonial-slide space-y-6">
+            <div class="flex justify-center items-center gap-1 text-amber-400 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-serif font-light italic leading-relaxed text-brand-charcoal max-w-3xl mx-auto">
+              “I had such a great experience with Paityn. She is very knowledgeable, and you can truly tell she loves what she does. The facial was incredibly relaxing, and my skin feels amazing afterward. I left feeling refreshed and confident in my skin. I will definitely be back.”
+            </blockquote>
+            <div>
+              <p class="text-sm font-medium tracking-wide uppercase text-brand-charcoal">Natalie Gutierrez</p>
+              <p class="text-xs tracking-wider text-brand-slate font-light mt-1">Google Review • Vandalia, IL</p>
+            </div>
+          </div>
+
+          <!-- Review 5 - Kim Bone -->
+          <div class="testimonial-slide space-y-6">
+            <div class="flex justify-center items-center gap-1 text-amber-400 text-lg">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <blockquote class="text-xl md:text-2xl font-serif font-light italic leading-relaxed text-brand-charcoal max-w-3xl mx-auto">
+              “Very nice, relaxing treatment. Amy is very knowledgeable and makes you feel very comfortable. Enjoy everything I’ve had done!”
+            </blockquote>
+            <div>
+              <p class="text-sm font-medium tracking-wide uppercase text-brand-charcoal">Kim Bone</p>
+              <p class="text-xs tracking-wider text-brand-slate font-light mt-1">Google Review • Vandalia, IL</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Navigation & Indicators -->
+        <div class="flex flex-col items-center justify-center space-y-5 mt-12">
+          <!-- Dot Indicators -->
+          <div class="flex items-center space-x-2" id="testimonial-dots" aria-label="Review slider indicators">
+            <button class="testimonial-dot h-2 rounded-full transition-all duration-300 w-8 bg-brand-charcoal" data-index="0" aria-label="Review 1"></button>
+            <button class="testimonial-dot h-2 rounded-full transition-all duration-300 w-2.5 bg-brand-gold/40 hover:bg-brand-gold" data-index="1" aria-label="Review 2"></button>
+            <button class="testimonial-dot h-2 rounded-full transition-all duration-300 w-2.5 bg-brand-gold/40 hover:bg-brand-gold" data-index="2" aria-label="Review 3"></button>
+            <button class="testimonial-dot h-2 rounded-full transition-all duration-300 w-2.5 bg-brand-gold/40 hover:bg-brand-gold" data-index="3" aria-label="Review 4"></button>
+            <button class="testimonial-dot h-2 rounded-full transition-all duration-300 w-2.5 bg-brand-gold/40 hover:bg-brand-gold" data-index="4" aria-label="Review 5"></button>
+          </div>
+
+          <!-- Arrow Buttons -->
+          <div class="flex justify-center space-x-4">
+            <button id="prev-testimonial"
+              class="w-11 h-11 rounded-full border border-brand-gold/40 bg-white/60 hover:bg-white hover:border-brand-charcoal flex items-center justify-center transition duration-300 shadow-sm"
+              aria-label="Previous review">
+              <span class="text-sm font-serif text-brand-charcoal">←</span>
+            </button>
+            <button id="next-testimonial"
+              class="w-11 h-11 rounded-full border border-brand-gold/40 bg-white/60 hover:bg-white hover:border-brand-charcoal flex items-center justify-center transition duration-300 shadow-sm"
+              aria-label="Next review">
+              <span class="text-sm font-serif text-brand-charcoal">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Links to Google Maps & Yelp listings -->
+        <div class="mt-10 pt-8 border-t border-brand-gold/15 flex flex-wrap justify-center items-center gap-4 text-xs">
+          <a href="https://www.google.com/maps/place/Skin+Reversal+Wellness+Spa/@38.9729795,-89.1007804,17z"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 border border-brand-gold/40 bg-white/80 hover:bg-white text-brand-charcoal rounded-full transition duration-300 shadow-sm hover:border-brand-charcoal">
+            <svg class="w-4 h-4 text-[#4285F4]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span class="font-medium">Read All 21+ Reviews on Google Maps</span>
+          </a>
+
+          <a href="https://www.yelp.com/biz/skin-reversal-spa-vandalia"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 border border-red-200 bg-white/80 hover:bg-white text-brand-charcoal rounded-full transition duration-300 shadow-sm hover:border-red-400">
+            <svg class="w-4 h-4 text-[#d32323]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.16 12.73a.85.85 0 0 0-.82-.57h-4.38l3.19-3.03a.85.85 0 0 0 .15-.97l-2.07-3.79a.85.85 0 0 0-1-.41l-4.14 1.49L10.7 1.2a.85.85 0 0 0-.83-.65H5.56a.85.85 0 0 0-.84.72L4 7.21l3.58 2.54a.85.85 0 0 0 .99-.04l2.91-2.28 1.17 4.22H8.38a.85.85 0 0 0-.82.59l-1.3 4.12a.85.85 0 0 0 .52 1.05l4.13 1.54a.85.85 0 0 0 .97-.33l2.45-3.65 3.32 2.87a.85.85 0 0 0 1.04.05l3.41-2.61a.85.85 0 0 0 .23-1.02l-2.17-3.54z"/>
+            </svg>
+            <span class="font-medium">Find Skin Reversal on Yelp</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- INTEGRATED APPOINTMENT SCHEDULER & CALL TRIGGER --- -->
+    <section class="py-24 bg-brand-sage-light/40 border-t border-brand-gold/15" id="booking-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+        <!-- Left details and call trigger -->
+        <div class="lg:col-span-5 space-y-8 reveal-left">
+          <div class="space-y-4">
+            <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Reserve Your Space</span>
+            <h2 class="text-4xl font-light font-serif text-brand-charcoal">Begin Your Skin Reversal</h2>
+            <p class="text-brand-slate text-sm font-light leading-relaxed">
+              Book your free consultation below. For custom wigs, hair pieces, toppers, or private scalp fitting
+              sessions, please phone our receptionist directly.
+            </p>
+          </div>
+
+          <div class="p-8 border border-brand-gold/20 bg-brand-cream space-y-6">
+            <h3 class="text-lg font-serif font-medium text-brand-charcoal">Lounge Reception</h3>
+
+            <div class="space-y-4">
+
+              <a href="tel:+12179941048" class="flex items-center group transition duration-300"
+                id="reception-phone-link">
+                <div
+                  class="w-12 h-12 bg-brand-sage-light flex items-center justify-center group-hover:bg-brand-sage transition duration-300">
+                  <svg class="w-5 h-5 text-brand-charcoal group-hover:text-brand-cream transition duration-300"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-xs uppercase tracking-widest text-brand-slate font-semibold">Call Our Receptionist</p>
+                  <p class="text-base text-brand-charcoal font-medium font-sans">+1 (217) 994-1048</p>
+                </div>
+              </a>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-brand-sage-light flex items-center justify-center">
+                  <svg class="w-5 h-5 text-brand-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-xs uppercase tracking-widest text-brand-slate font-semibold">Lounge Hours</p>
+                  <p class="text-xs text-brand-charcoal font-medium">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                </div>
+              </div>
+
+              <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer"
+                class="flex items-center group transition duration-300" id="reception-facebook-link">
+                <div
+                  class="w-12 h-12 bg-brand-sage-light flex items-center justify-center group-hover:bg-brand-sage transition duration-300">
+                  <svg
+                    class="w-5 h-5 text-brand-charcoal group-hover:text-brand-cream transition duration-300 fill-current"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-xs uppercase tracking-widest text-brand-slate font-semibold">Connect Online</p>
+                  <p
+                    class="text-xs text-brand-charcoal font-medium group-hover:text-brand-gold-dark transition duration-300">
+                    facebook.com/SkinReversal</p>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Web3Forms booking form -->
+        <div class="lg:col-span-7 reveal-right delay-200">
+          <div class="bg-brand-cream border border-brand-gold/15 p-8 lg:p-12 shadow-sm">
+
+            <h3 class="text-2xl font-serif text-brand-charcoal mb-8 text-center lg:text-left">Send a Request</h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="booking-form" class="space-y-6">
+
+              <!-- Web3Forms Access Key & Spam Protection -->
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="Skin Reversal - New Luxury Booking Inquiry">
+              <input type="hidden" name="from_name" value="Skin Reversal Clinic">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Name -->
+                <div class="space-y-2">
+                  <label for="name" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Your Full
+                    Name *</label>
+                  <input type="text" name="name" id="name" required
+                    class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                </div>
+
+                <!-- Email -->
+                <div class="space-y-2">
+                  <label for="email" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Email
+                    Address *</label>
+                  <input type="email" name="email" id="email" required
+                    class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Phone -->
+                <div class="space-y-2">
+                  <label for="phone" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Telephone
+                    Number *</label>
+                  <input type="tel" name="phone" id="phone" required
+                    class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                </div>
+
+                <!-- Date -->
+                <div class="space-y-2">
+                  <label for="date" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Preferred
+                    Date *</label>
+                  <input type="date" name="date" id="date" required
+                    class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                </div>
+              </div>
+
+              <!-- Treatment select -->
+              <div class="space-y-2">
+                <label for="treatment" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Desired
+                  Service / Focus *</label>
+                <select name="treatment" id="treatment" required
+                  class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                  <option value="" disabled selected>Select a Clinical Service...</option>
+
+                  <optgroup label="Consultations" class="bg-brand-cream font-semibold text-brand-sage">
+                    <option value="free-consultation" class="text-brand-charcoal font-normal">Free Skin Diagnostic
+                      Consultation (FREE)</option>
+                  </optgroup>
+
+                  <optgroup label="Facials Menu" class="bg-brand-cream font-semibold text-brand-gold">
+                    <option value="customized-facial" class="text-brand-charcoal font-normal">Customized Facial ($80)
+                    </option>
+                    <option value="express-facial" class="text-brand-charcoal font-normal">Express Facial ($65)</option>
+                    <option value="dermaplane" class="text-brand-charcoal font-normal">Dermaplane Facial ($90)</option>
+                    <option value="dermaplane-express" class="text-brand-charcoal font-normal">Dermaplane Express ($65)
+                    </option>
+                    <option value="oxygen-rx" class="text-brand-charcoal font-normal">Oxygen RX Facial ($125)</option>
+                    <option value="oxygen-acne-detox" class="text-brand-charcoal font-normal">Oxygen Acne Detox ($110)
+                    </option>
+                    <option value="carboxy-mask" class="text-brand-charcoal font-normal">Carboxy Mask Facial ($155)
+                    </option>
+                    <option value="four-layer-glow" class="text-brand-charcoal font-normal">4-Layer Glow Facial ($125)
+                    </option>
+                    <option value="coco-chocolate" class="text-brand-charcoal font-normal">COCO - Chocolate Facial
+                      ($125)</option>
+                    <option value="plume-facial" class="text-brand-charcoal font-normal">Plume Facial ($65)</option>
+                    <option value="mask-madness" class="text-brand-charcoal font-normal">Mask Madness Facial ($125)
+                    </option>
+                    <option value="princess-facial" class="text-brand-charcoal font-normal">Princess Facial ($45)
+                    </option>
+                  </optgroup>
+
+                  <optgroup label="O2 Hydrofacials & Advanced Skincare"
+                    class="bg-brand-cream font-semibold text-brand-gold">
+                    <option value="hydro-signature" class="text-brand-charcoal font-normal">Signature Hydro Facial
+                      ($189)</option>
+                    <option value="hydro-deluxe" class="text-brand-charcoal font-normal">Deluxe Hydro Facial ($249)
+                    </option>
+                    <option value="hydro-premium" class="text-brand-charcoal font-normal">Premium Hydro Facial ($299)
+                    </option>
+                    <option value="microderm" class="text-brand-charcoal font-normal">Wet Tip Diamond Microdermabrasion
+                      ($175)</option>
+                    <option value="keravive" class="text-brand-charcoal font-normal">Keravive Scalp Treatment ($300)
+                    </option>
+                  </optgroup>
+
+                  <optgroup label="Detox Saunas, Salt Cabin & Body"
+                    class="bg-brand-cream font-semibold text-brand-gold">
+                    <option value="infrared-sauna" class="text-brand-charcoal font-normal">Infrared Detox Sauna ($30)
+                    </option>
+                    <option value="salt-cabin" class="text-brand-charcoal font-normal">Salt Cabin Halotherapy ($30)
+                    </option>
+                    <option value="ionic-detox" class="text-brand-charcoal font-normal">Ionic Foot Detox ($35)</option>
+                    <option value="back-facial" class="text-brand-charcoal font-normal">Back Facial ($65)</option>
+                    <option value="body-plume" class="text-brand-charcoal font-normal">Body Treatment (Plume) ($105)
+                    </option>
+                    <option value="lymphatic" class="text-brand-charcoal font-normal">Lymphatic Therapy ($115+)</option>
+                  </optgroup>
+
+                  <optgroup label="Lashes, Brows & Add-Ons" class="bg-brand-cream font-semibold text-brand-gold">
+                    <option value="dermaplane-addon" class="text-brand-charcoal font-normal">Add-on Dermaplane to any
+                      service ($50)</option>
+                    <option value="lash-lift-tint" class="text-brand-charcoal font-normal">Lash Lift & Tint ($85)
+                    </option>
+                    <option value="brow-lamination" class="text-brand-charcoal font-normal">Brow Lamination & Shaping
+                      ($95)</option>
+                  </optgroup>
+                </select>
+                <p id="treatment-duration-tip" class="text-xs font-serif italic text-brand-sage hidden mt-2"></p>
+              </div>
+
+              <!-- Concerns -->
+              <div class="space-y-2">
+                <label for="message"
+                  class="text-xs uppercase tracking-widest text-brand-slate font-medium">Concern/Focus</label>
+                <textarea name="message" id="message" rows="3" placeholder="Type In Concern"
+                  class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none"></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit"
+                  class="w-full btn-gold py-4 text-xs font-semibold tracking-[0.2em] transition duration-300 rounded-none shadow-sm">
+                  Request Reservation
+                </button>
+                <div id="form-result" class="hidden mt-4 transition duration-300"></div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/15 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+
+      <!-- Brand column -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-serif tracking-[0.2em] text-brand-cream uppercase font-medium">SKIN REVERSAL</h4>
+        <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+          A clinical skincare spa restoring skin vitality, scalp wellness, and confidence with biocompatible botanical
+          therapies.
+        </p>
+        <div class="pt-2">
+          <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center space-x-2.5 text-xs text-brand-gold hover:text-white transition duration-300 group"
+            aria-label="Visit Skin Reversal on Facebook">
+            <span
+              class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/20 transition duration-300">
+              <svg class="w-4 h-4 fill-current text-brand-gold group-hover:text-white transition duration-300"
+                viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </span>
+            <span class="tracking-widest uppercase text-[11px] font-medium">Follow on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Treatments</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="services.html#facials" class="hover:text-brand-gold transition duration-300">Facials & O2
+              Hydrofacials</a></li>
+          <li><a href="services.html#body-treatments" class="hover:text-brand-gold transition duration-300">Detox Saunas
+              & Cabins</a></li>
+          <li><a href="services.html#lashes-brows" class="hover:text-brand-gold transition duration-300">Lashes &
+              Brows</a></li>
+          <li><a href="services.html#pricing-list" class="hover:text-brand-gold transition duration-300">Complete
+              Pricing Menu</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick links column 2 -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Clinic Lounges</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="about.html#clinic-philosophy"
+              class="hover:text-brand-gold transition duration-300">Philosophy</a></li>
+          <li><a href="about.html#clinic-founders" class="hover:text-brand-gold transition duration-300">Expert
+              Estheticians</a></li>
+          <li><a href="book.html" class="hover:text-brand-gold transition duration-300">Reservation Guidelines</a></li>
+          <li><a href="tel:+12179941048" class="hover:text-brand-gold transition duration-300">Direct Reception Line</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Locations & hours column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">The Sanctuary</h5>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          1212 N 8th St<br>
+          Vandalia, IL 62471
+        </p>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          <span class="text-brand-gold">T:</span> +1 (217) 994-1048<br>
+          <span class="text-brand-gold">E:</span> concierge@skinreversalclinic.com<br>
+          <span class="text-brand-gold">FB:</span> <a href="https://www.facebook.com/SkinReversal" target="_blank"
+            rel="noopener noreferrer"
+            class="hover:text-brand-gold transition duration-300">facebook.com/SkinReversal</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Trust badges and copyright -->
+    <div
+      class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] tracking-wider text-gray-400 uppercase">
+
+      <!-- Trust badges -->
+      <div class="flex items-center space-x-6">
+        <span>✦ Bio-Compatible Products</span>
+        <span>✦ Private Consult Lounges</span>
+        <span>✦ Board Certified Estheticians</span>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <p>&copy; 2026 Skin Reversal. All Rights Reserved. Custom Design for Skin & Scalp Synergy.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Global scripts -->
+  <script type="module" src="scripts.js"></script>
+</body>
+
+</html>

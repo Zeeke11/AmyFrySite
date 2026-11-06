@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treatments & Services | Skin Reversal Skincare Clinic</title>
+  <meta name="description" content="Explore our menu of deep clinical face cleanings, signature facial sculpts, and advanced cell rejuvenation routines. Tailored, bio-compatible spa therapies.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FFF0F2',
+              sage: '#7D8C76',
+              'sage-light': '#E8EBE6',
+              'sage-dark': '#5C6A56',
+              charcoal: '#1C1F1D',
+              slate: '#4E534F',
+              gold: '#FFB6C1',
+              'gold-dark': '#D38496'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-cream text-brand-charcoal flex flex-col min-h-screen">
+
+  <!-- --- NAVIGATION BAR --- -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2 group" id="nav-logo">
+        <span class="text-2xl font-serif text-brand-charcoal tracking-[0.2em] font-medium transition duration-300 group-hover:text-brand-sage">SKIN REVERSAL</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" class="nav-link text-brand-slate py-1" id="link-home">Home</a>
+        <a href="about.html" class="nav-link text-brand-slate py-1" id="link-about">About</a>
+        <a href="services.html" class="nav-link text-brand-slate py-1" id="link-services">Services</a>
+        <a href="partnership.html" class="nav-link text-brand-slate py-1" id="link-partnership">Postiche Beauty</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="hidden md:flex items-center space-x-6">
+        <!-- Call Receptionist Link -->
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300" id="header-phone-cta">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Give us a call
+        </a>
+        <!-- Facebook Link -->
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300 group" id="header-facebook-cta" title="Visit Skin Reversal on Facebook" aria-label="Visit Skin Reversal on Facebook">
+          <svg class="w-4 h-4 fill-current text-brand-sage group-hover:text-brand-gold transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="book.html" class="btn-gold py-3 px-6 text-xs transition duration-300 font-semibold" id="header-book-cta">Book Consultation</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden flex items-center p-2 text-brand-charcoal focus:outline-none" id="mobile-menu-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden flex-col bg-brand-cream border-t border-brand-gold/10 px-6 py-6 space-y-4 shadow-inner" id="mobile-menu">
+      <a href="index.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Home</a>
+      <a href="about.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">About</a>
+      <a href="services.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Services</a>
+      <a href="partnership.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Postiche Beauty</a>
+      <div class="pt-4 border-t border-brand-gold/10 flex flex-col space-y-4">
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Call Our Receptionist
+        </a>
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300">
+          <svg class="w-4 h-4 mr-2 text-brand-sage fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook Page
+        </a>
+        <a href="book.html" class="btn-gold py-3 text-center text-xs w-full">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- --- PAGE HEADER --- -->
+    <section class="py-16 md:py-24 border-b border-brand-gold/10 bg-brand-sage-light/20" id="services-intro">
+      <div class="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
+        <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Treatment Menu</span>
+        <h1 class="text-4xl md:text-6xl font-light font-serif text-brand-charcoal mt-4 mb-6">Our Skincare Treatments & Therapy</h1>
+        <p class="text-brand-slate text-base md:text-lg leading-relaxed font-light max-w-2xl mx-auto">
+          Personalized skincare treatments merging clinical dermatology with relaxation. Every session includes a skin-barrier assessment.
+        </p>
+      </div>
+    </section>
+
+    <!-- --- TREATMENTS GRID SECTION --- -->
+    <section class="py-24" id="treatment-details">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-24">
+        
+        <!-- CATEGORY 1: FACIALS & O2 HYDROFACIALS -->
+        <div class="space-y-12" id="facials">
+          <div class="border-b border-brand-gold/20 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 reveal-on-scroll">
+            <h2 class="text-3xl font-serif font-light text-brand-charcoal">01. Facials & O2 Hydrofacials</h2>
+            <div class="flex items-center space-x-3">
+              <span class="text-xs tracking-widest text-brand-sage font-semibold uppercase">Free Consultations</span>
+              <span class="text-brand-gold">✦</span>
+              <span class="text-xs tracking-widest text-brand-gold font-semibold uppercase">Skin & Tissue Health</span>
+            </div>
+          </div>
+
+          <!-- Anchor aliases for existing links -->
+          <span id="hydro-facials" class="block -mt-12 pt-12 invisible"></span>
+          <span id="advanced-skincare" class="block -mt-12 pt-12 invisible"></span>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-7 space-y-8 reveal-left">
+              <p class="text-brand-slate text-sm font-light leading-relaxed">
+                Our treatments are customized specifically to what your skin needs with a blend of medical grade, natural, professional grade, & skincare wellness for the very best results. Every session focuses on skin and tissue health to restore your natural dermal barrier.
+              </p>
+              
+              <!-- Signature & Clinical Facials Menu -->
+              <div class="space-y-4">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/15 pb-2">Signature & Clinical Facials</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Customized Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$80</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Express Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$65</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Dermaplane</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$90</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Dermaplane Express</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$65</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200 bg-brand-sage-light/10">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Add-on Dermaplane</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Oxygen RX Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$125 <span class="text-xs text-brand-slate font-normal font-sans">/ $345 (Series of 3)</span></span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Oxygen Acne Detox</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$110</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Carboxy Mask Facial <span class="text-xs text-brand-slate font-normal font-sans">(1.5 hrs)</span></span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$155</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">4-Layer Glow Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$125</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">COCO - Chocolate Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$125</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Plume Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$65</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Mask Madness Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$125</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Princess Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$45</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Hydrafacial Hydrodermabrasion & Microdermabrasion -->
+              <div class="space-y-4 pt-4 border-t border-brand-gold/15">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/15 pb-2">Hydrafacial Hydrodermabrasion & Microdermabrasion</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Hydrafacial Hydrodermabrasion</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$165</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Signature Hydro Facial</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$189</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Deluxe Hydro Facial <span class="text-xs text-brand-slate font-normal font-sans">(Booster & Red Light)</span></span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$249</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Premium Hydro Facial <span class="text-xs text-brand-slate font-normal font-sans">(Booster, Red Light & Lymphatic)</span></span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$299</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Wet Tip Diamond Microdermabrasion</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$175</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Keravive Scalp Treatment</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$300+ <span class="text-xs text-brand-slate font-normal font-sans">/ $550 (2-pk)</span></span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Page 4: Advanced Treatments, CIT & Clinical Peels -->
+              <div class="space-y-4 pt-4 border-t border-brand-gold/15">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/15 pb-2">Advanced Treatments, CIT & Clinical Peels</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Collagen Induction (CIT)</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-sm font-semibold text-brand-charcoal font-sans whitespace-nowrap">$350+</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Clinical Peels <span class="text-xs text-brand-slate font-normal font-sans">(Pumpkin, Berry, Jessner, Skin Reversal)</span></span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-xs font-semibold text-brand-sage uppercase font-sans tracking-wider whitespace-nowrap">Book Free Consultation</span>
+                  </li>
+                  <li class="flex items-baseline justify-between py-2 border-b border-brand-gold/10 group hover:bg-brand-sage-light/20 px-2 rounded-sm transition-colors duration-200">
+                    <div class="flex items-baseline space-x-2.5">
+                      <span class="text-brand-gold text-xs">✦</span>
+                      <span class="text-base font-serif font-medium text-brand-charcoal">Peptides & IV Drip Integration</span>
+                    </div>
+                    <span class="border-b border-dotted border-brand-gold/25 mx-3 flex-grow hidden sm:block"></span>
+                    <span class="text-xs font-semibold text-brand-sage uppercase font-sans tracking-wider whitespace-nowrap">Book Free Consultation</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Sticky Image / Visual Right -->
+            <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28 reveal-right delay-200">
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm">
+                <img src="images/spa_treatment_room.jpg" alt="Clinical Hydro Facial and treatment suite" class="w-full h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                  <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Clinical Suite</span>
+                  <span class="text-lg font-serif italic tracking-wide font-light">Customized Dermal Care</span>
+                </div>
+              </div>
+
+              <!-- Consultation Card -->
+              <div class="bg-brand-sage-light/30 border border-brand-gold/20 p-6 space-y-3 rounded-sm">
+                <div class="flex items-center space-x-2 text-xs tracking-widest text-brand-gold uppercase font-bold">
+                  <span>✦</span>
+                  <span>Free Consultations</span>
+                </div>
+                <h4 class="font-serif text-xl text-brand-charcoal">Unsure which treatment fits your skin?</h4>
+                <p class="text-brand-slate text-xs font-light leading-relaxed">
+                  Every face is unique. Schedule a free diagnostic consultation with our licensed estheticians for a comprehensive skin and tissue health assessment.
+                </p>
+                <div class="pt-2">
+                  <a href="book.html" class="btn-gold py-3 px-6 text-xs text-center block font-semibold">Book Free Consultation</a>
+                </div>
+              </div>
+
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm">
+                <img src="images/keravive_scalp_treatment.jpg" alt="Keravive scalp treatment and follicle stimulation" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent opacity-70"></div>
+                <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                  <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Scalp & Hair Health</span>
+                  <span class="text-base font-serif italic tracking-wide font-light">Keravive Scalp Treatment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: BODY & DETOX -->
+        <div class="space-y-12" id="body-treatments">
+          <div class="border-b border-brand-gold/20 pb-4 flex items-center justify-between reveal-on-scroll">
+            <h2 class="text-3xl font-serif font-light text-brand-charcoal">02. Body & Detox Treatments</h2>
+            <span class="text-xs tracking-widest text-brand-gold font-semibold uppercase">Saunas, Salt & Cellular Detox</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 order-2 lg:order-1 reveal-left">
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm mb-6">
+                <img src="images/detox_sauna_cabin.jpg" alt="Private infrared detox sauna and salt therapy cabin" class="w-full h-80 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+                  <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Cellular Wellness</span>
+                  <span class="text-lg font-serif italic tracking-wide font-light">Infrared Sauna & Salt Cabin</span>
+                </div>
+              </div>
+              <div class="p-6 bg-brand-sage-light/25 border border-brand-gold/15 rounded-sm space-y-2">
+                <span class="text-[10px] tracking-widest uppercase text-brand-gold font-semibold">Treatment Room & Red Light</span>
+                <h4 class="font-serif text-lg text-brand-charcoal">Cellular LED Phototherapy</h4>
+                <p class="text-brand-slate text-xs font-light leading-relaxed">
+                  Our private treatment rooms incorporate clinical Red Light LED therapy to promote mitochondrial ATP production, ease tissue inflammation, and speed dermal barrier recovery.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-6 reveal-right delay-200">
+              <p class="text-brand-slate text-sm font-light leading-relaxed">
+                Rebalance your body's cellular system. From relaxing infrared heat and respiratory-cleansing salt microclimates, to stimulating manual lymphatic drainage.
+              </p>
+              
+              <ul class="space-y-5">
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Detox Saunas & Cabins (Sauna, Infrared, Salt Therapy)</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$30</span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Deep-tissue infrared saunas to induce cellular detox, relieve tension, and soothe joints. Aerosolized micro-salt cabin therapy clears airways, calms respiratory irritation, and purifies inflamed skin. <span class="text-brand-slate font-medium">(Packages: $150 6-pk / $240 12-pk)</span>.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Ionic Foot Detox</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$35</span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Bio-electric ionization foot bath creating an energizing electrolyte field that assists the body's natural pathways in sweeping heavy metals, toxins, and metabolic waste. <span class="text-brand-slate font-medium">(Packages: $150 5-pk / $250 10-pk)</span>.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Back Facial & Plume Body Treatment</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$65 <span class="text-xs text-brand-slate font-normal font-sans">/ $105 Plume</span></span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Deep clinical cleansing, steam extractions, active botanical body masques, and custom moisture wraps designed specifically to restore hard-to-reach areas of the back and full body.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Lymphatic Therapy</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$115+</span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Soft, targeted strokes to encourage lymphatic flow, reduce swelling, and promote healthy dermal cell healing. Essential for fluid retention and tissue regeneration. (Consultation required)</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: LASHES & BROWS -->
+        <div class="space-y-12" id="lashes-brows">
+          <div class="border-b border-brand-gold/20 pb-4 flex items-center justify-between reveal-on-scroll">
+            <h2 class="text-3xl font-serif font-light text-brand-charcoal">03. Lashes & Brows</h2>
+            <span class="text-xs tracking-widest text-brand-gold font-semibold uppercase">Precision Framing</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 reveal-left">
+              <p class="text-brand-slate text-sm font-light leading-relaxed">
+                Elevate your look with our meticulously designed brow and lash treatments. We focus on symmetry, color-harmony, and long-lasting definition tailored specifically to frame your features.
+              </p>
+              
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Lash Lift & Tint</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$65 <span class="text-xs text-brand-slate font-normal font-sans">/ $15 Tint only</span></span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Curls and darkens your natural lashes from base to tip using active botanical, bio-compatible tinting compounds. Lasts up to 6 weeks.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Brow Mapping, Wax & Tint</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$75</span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">Symmetry-focused brow mapping combined with precise shaping, waxing, and custom color tinting for full, flawless brows.</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-brand-gold mr-3">✦</span>
+                  <div>
+                    <div class="flex items-baseline justify-between">
+                      <h4 class="text-lg font-serif font-medium text-brand-charcoal">Brow Lamination</h4>
+                      <span class="text-sm font-semibold text-brand-charcoal ml-2 font-sans">$70</span>
+                    </div>
+                    <p class="text-brand-slate text-xs font-light mt-1">A keratin-infused structure treatment to realign brow hairs, giving them a uniform, fluffy, and brushed-up volume.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-5 reveal-right delay-200">
+              <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm">
+                <img src="images/lashes_brows.jpg" alt="Premium eyelash lift and eyebrow shape aesthetic" class="w-full h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/30 via-transparent to-transparent opacity-40"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- PRICING & DURATIONS TABLE --- -->
+    <section class="py-24 bg-brand-sage-light/20 border-y border-brand-gold/10" id="pricing-list">
+      <div class="max-w-3xl mx-auto px-6">
+        
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Treatments & Investment</span>
+          <h2 class="text-3xl font-light font-serif text-brand-charcoal mt-2">The Skincare Collection</h2>
+          <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
+          <p class="text-brand-slate text-xs font-light mt-3">Free Consultations Available for All Facial & Wellness Services</p>
+        </div>
+
+        <div class="bg-brand-cream border border-brand-gold/15 shadow-sm p-8 md:p-12 reveal-on-scroll delay-100">
+          <div class="divide-y divide-brand-gold/10 space-y-8">
+            
+            <!-- Category Group 1: Facials & O2 Hydrofacials -->
+            <div class="pt-4 first:pt-0">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold">Facials Menu & O2 Hydrofacials</h3>
+                <span class="text-[10px] tracking-wider uppercase text-brand-sage font-medium">Free Consultations</span>
+              </div>
+              <div class="space-y-4">
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Customized Facial <span class="text-xs text-brand-slate font-normal font-sans">(Customized to skin needs)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$80</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Express Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$65</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Dermaplane</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">50 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$90</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Dermaplane Express</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$65</span>
+                </div>
+                <div class="flex justify-between items-baseline bg-brand-sage-light/30 px-3 py-1.5 -mx-3 rounded-sm">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Add-on Dermaplane <span class="text-xs text-brand-slate font-normal font-sans">(To any service)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-sage font-medium mr-2 whitespace-nowrap shrink-0">Add-on</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$50</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Oxygen RX Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$125 <span class="text-xs text-brand-slate font-normal font-sans">/ $345 (Series of 3)</span></span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Oxygen Acne Detox</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$110</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Carboxy Mask Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">1.5 hrs</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$155</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">4-Layer Glow Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$125</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">COCO - Chocolate Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$125</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Plume Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$65</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Mask Madness Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$125</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Princess Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$45</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Hydrafacial Hydrodermabrasion</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$165</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Signature Hydro Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$189</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Deluxe Hydro Facial <span class="text-xs text-brand-slate font-normal font-sans">(Booster & Red Light)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">75 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$249</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Premium Hydro Facial <span class="text-xs text-brand-slate font-normal font-sans">(Booster, Red Light & Lymphatic)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">90 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$299</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Wet Tip Diamond Microdermabrasion</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$175</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Collagen Induction (CIT)</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">75-90 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$350+</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Keravive Scalp Treatment</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$300+ <span class="text-xs text-brand-slate font-normal font-sans">/ $550 (2-pk)</span></span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Clinical Peels <span class="text-xs text-brand-slate font-normal font-sans">(Pumpkin, Berry, Jessner, Skin Reversal)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">Custom</span>
+                  <span class="font-sans text-sm font-semibold text-brand-sage uppercase whitespace-nowrap shrink-0">Consultation</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Peptides & IV Drip Integration</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">Inquiry</span>
+                  <span class="font-sans text-sm font-semibold text-brand-sage uppercase whitespace-nowrap shrink-0">Consultation</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Diagnostic Skin Consultation</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">15-30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-sage uppercase whitespace-nowrap shrink-0">Free</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category Group 2: Body & Detox Saunas -->
+            <div class="pt-6">
+              <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold mb-4">Body, Detox Saunas & Salt Cabin</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Infrared Sauna Session</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$30 <span class="text-xs text-brand-slate font-normal font-sans">/ $150 (6-pk) / $240 (12-pk)</span></span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Salt Cabin Session <span class="text-xs text-brand-slate font-normal font-sans">(Halotherapy)</span></span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$30 <span class="text-xs text-brand-slate font-normal font-sans">/ $150 (6-pk) / $240 (12-pk)</span></span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Ionic Foot Detox</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$35 <span class="text-xs text-brand-slate font-normal font-sans">/ $150 (5-pk) / $250 (10-pk)</span></span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Back Facial</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$65</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Plume Body Treatment</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">75 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$105</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Lymphatic Therapy</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">Consult Req.</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$115+</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category Group 3: Lashes & Brows -->
+            <div class="pt-6">
+              <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold mb-4">Lashes & Brows</h3>
+              <div class="space-y-4">
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Lash Lift</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$65</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Lash Tint</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">20 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$15</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Brow Shaping</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">30 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$35</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Brow Lamination</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">45 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$70</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="font-serif text-base text-brand-charcoal font-medium">Brow Mapping, Wax & Tint</span>
+                  <span class="border-b border-dotted border-brand-gold/25 mx-4 flex-grow"></span>
+                  <span class="text-xs text-brand-slate font-medium mr-2 whitespace-nowrap shrink-0">60 min</span>
+                  <span class="font-sans text-sm font-semibold text-brand-charcoal whitespace-nowrap shrink-0">$75</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- POST-TREATMENT ADVICE --- -->
+    <section class="py-24" id="homecare-teaser">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Content Left -->
+        <div class="lg:col-span-7 space-y-6 reveal-left">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Home Care Integration</span>
+          <h2 class="text-4xl font-light font-serif text-brand-charcoal">Maintaining The Reversal</h2>
+          <p class="text-brand-slate text-sm font-light leading-relaxed">
+            Maximize your treatment results at home with customized active botanical oils and barrier protection creams.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+            <div class="space-y-2 border-l border-brand-gold/30 pl-4">
+              <h4 class="font-serif text-lg text-brand-charcoal">01. Restore Lipids</h4>
+              <p class="text-brand-slate text-xs font-light">Apply custom-formulated botanical oils to lock in hydration immediately after cleaning sessions.</p>
+            </div>
+            <div class="space-y-2 border-l border-brand-gold/30 pl-4">
+              <h4 class="font-serif text-lg text-brand-charcoal">02. Protect Barrier</h4>
+              <p class="text-brand-slate text-xs font-light">Avoid active chemicals or scrubs for 72 hours, using physical SPF daily.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call Reception Specialist Right -->
+        <div class="lg:col-span-5 reveal-right delay-200">
+          <div class="bg-brand-sage-light/25 border border-brand-gold/15 p-8 text-center space-y-6">
+            <h3 class="text-2xl font-serif text-brand-charcoal">Begin Your Skincare Journey</h3>
+            <p class="text-brand-slate text-xs font-light leading-relaxed">
+              Schedule your free consultation to receive a custom skin-barrier assessment.
+            </p>
+            <div class="pt-2 flex flex-col space-y-4">
+              <a href="book.html" class="btn-gold py-4 w-full text-xs font-semibold tracking-widest text-center block">Book Free Consultation</a>
+              <a href="tel:+12179941048" class="text-xs text-brand-slate tracking-widest uppercase font-semibold hover:text-brand-gold transition duration-300 block">Or Call Concierge: +1 (217) 994-1048</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- CALL TO ACTION --- -->
+    <section class="py-16 bg-brand-charcoal text-brand-cream text-center" id="services-cta">
+      <div class="max-w-3xl mx-auto px-6 space-y-6 reveal-on-scroll">
+        <h3 class="text-3xl font-light font-serif">Ready to experience personalized dermal care?</h3>
+        <p class="text-gray-400 text-xs tracking-wider uppercase">Book a 15-minute diagnostic assessment with our director.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4">
+          <a href="book.html" class="btn-gold py-4 px-8 text-xs w-full sm:w-auto text-center tracking-widest font-semibold" id="services-book-btn">Request Reservation</a>
+          <a href="tel:+12179941048" class="btn-outline-sage text-brand-cream border-brand-gold/40 hover:border-brand-cream py-4 px-8 text-xs w-full sm:w-auto text-center tracking-widest font-semibold" id="services-call-btn">Give us a call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/15 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Brand column -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-serif tracking-[0.2em] text-brand-cream uppercase font-medium">SKIN REVERSAL</h4>
+        <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+          A clinical skincare spa restoring skin vitality, scalp wellness, and confidence with biocompatible botanical therapies.
+        </p>
+        <div class="pt-2">
+          <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2.5 text-xs text-brand-gold hover:text-white transition duration-300 group" aria-label="Visit Skin Reversal on Facebook">
+            <span class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/20 transition duration-300">
+              <svg class="w-4 h-4 fill-current text-brand-gold group-hover:text-white transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </span>
+            <span class="tracking-widest uppercase text-[11px] font-medium">Follow on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Treatments</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="services.html#facials" class="hover:text-brand-gold transition duration-300">Facials & O2 Hydrofacials</a></li>
+          <li><a href="services.html#body-treatments" class="hover:text-brand-gold transition duration-300">Body & Detox Saunas</a></li>
+          <li><a href="services.html#lashes-brows" class="hover:text-brand-gold transition duration-300">Lashes & Brows</a></li>
+          <li><a href="services.html#pricing-list" class="hover:text-brand-gold transition duration-300">Pricing Menu & Consultations</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick links column 2 -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Clinic Lounges</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="about.html#clinic-philosophy" class="hover:text-brand-gold transition duration-300">Philosophy</a></li>
+          <li><a href="about.html#clinic-founders" class="hover:text-brand-gold transition duration-300">Expert Estheticians</a></li>
+          <li><a href="book.html" class="hover:text-brand-gold transition duration-300">Reservation Guidelines</a></li>
+          <li><a href="tel:+12179941048" class="hover:text-brand-gold transition duration-300">Direct Reception Line</a></li>
+        </ul>
+      </div>
+
+      <!-- Locations & hours column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">The Sanctuary</h5>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          1212 N 8th St<br>
+          Vandalia, IL 62471
+        </p>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          <span class="text-brand-gold">T:</span> +1 (217) 994-1048<br>
+          <span class="text-brand-gold">E:</span> concierge@skinreversalclinic.com<br>
+          <span class="text-brand-gold">FB:</span> <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition duration-300">facebook.com/SkinReversal</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Trust badges and copyright -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] tracking-wider text-gray-400 uppercase">
+      
+      <!-- Trust badges -->
+      <div class="flex items-center space-x-6">
+        <span>✦ Bio-Compatible Products</span>
+        <span>✦ Private Consult Lounges</span>
+        <span>✦ Board Certified Estheticians</span>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <p>&copy; 2026 Skin Reversal. All Rights Reserved. Custom Design for Skin & Scalp Synergy.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Global scripts -->
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>

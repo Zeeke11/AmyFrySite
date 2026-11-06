@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Consultation | Skin Reversal Clinic</title>
+  <meta name="description" content="Schedule your free skincare consultation. Choose from clinical face cleanings, facials, or a private Postiche Beauty fitting.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FFF0F2',
+              sage: '#7D8C76',
+              'sage-light': '#E8EBE6',
+              'sage-dark': '#5C6A56',
+              charcoal: '#1C1F1D',
+              slate: '#4E534F',
+              gold: '#FFB6C1',
+              'gold-dark': '#D38496'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-cream text-brand-charcoal flex flex-col min-h-screen">
+
+  <!-- --- NAVIGATION BAR --- -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2 group" id="nav-logo">
+        <span class="text-2xl font-serif text-brand-charcoal tracking-[0.2em] font-medium transition duration-300 group-hover:text-brand-sage">SKIN REVERSAL</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" class="nav-link text-brand-slate py-1" id="link-home">Home</a>
+        <a href="about.html" class="nav-link text-brand-slate py-1" id="link-about">About</a>
+        <a href="services.html" class="nav-link text-brand-slate py-1" id="link-services">Services</a>
+        <a href="partnership.html" class="nav-link text-brand-slate py-1" id="link-partnership">Postiche Beauty</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="hidden md:flex items-center space-x-6">
+        <!-- Call Receptionist Link -->
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300" id="header-phone-cta">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Give us a call
+        </a>
+        <!-- Facebook Link -->
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300 group" id="header-facebook-cta" title="Visit Skin Reversal on Facebook" aria-label="Visit Skin Reversal on Facebook">
+          <svg class="w-4 h-4 fill-current text-brand-sage group-hover:text-brand-gold transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="book.html" class="btn-gold py-3 px-6 text-xs transition duration-300 font-semibold" id="header-book-cta">Book Consultation</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden flex items-center p-2 text-brand-charcoal focus:outline-none" id="mobile-menu-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden flex-col bg-brand-cream border-t border-brand-gold/10 px-6 py-6 space-y-4 shadow-inner" id="mobile-menu">
+      <a href="index.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Home</a>
+      <a href="about.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">About</a>
+      <a href="services.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Services</a>
+      <a href="partnership.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Postiche Beauty</a>
+      <div class="pt-4 border-t border-brand-gold/10 flex flex-col space-y-4">
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Call Our Receptionist
+        </a>
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300">
+          <svg class="w-4 h-4 mr-2 text-brand-sage fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook Page
+        </a>
+        <a href="book.html" class="btn-gold py-3 text-center text-xs w-full">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- --- PAGE HEADER --- -->
+    <section class="py-16 md:py-24 border-b border-brand-gold/10 bg-brand-sage-light/20" id="booking-intro">
+      <div class="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
+        <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Online Reservation</span>
+        <h1 class="text-4xl md:text-6xl font-light font-serif text-brand-charcoal mt-4 mb-6">Schedule Your Sanctuary Time</h1>
+        <p class="text-brand-slate text-base md:text-lg leading-relaxed font-light max-w-2xl mx-auto">
+          Fill out the form below. We will contact you within 24 hours to confirm your free consultation.
+        </p>
+      </div>
+    </section>
+
+    <!-- --- FORM & SIDEBAR WORKSPACE --- -->
+    <section class="py-24" id="booking-workspace">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
+        
+        <!-- Booking form left -->
+        <div class="lg:col-span-8 reveal-left">
+          <div class="bg-white border border-brand-gold/15 p-8 md:p-12 shadow-sm">
+            
+            <h2 class="text-3xl font-serif text-brand-charcoal mb-8">Consultation Scheduling Form</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="booking-form" class="space-y-8">
+              
+              <!-- Web3Forms Access Key & Spam Protection -->
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="Skin Reversal - Premium Appointment Booking Request">
+              <input type="hidden" name="from_name" value="Skin Reversal Booking Desk">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <!-- Section 1: Guest Info -->
+              <div class="space-y-4">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/10 pb-2">01. Contact Credentials</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label for="name" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Your Name *</label>
+                    <input type="text" name="name" id="name" required placeholder="First and last name" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="email" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Email Address *</label>
+                    <input type="email" name="email" id="email" required placeholder="email@example.com" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label for="phone" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Phone Number *</label>
+                    <input type="tel" name="phone" id="phone" required placeholder="+1 (555) 000-0000" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none">
+                  </div>
+                  
+                  <div class="space-y-2">
+                    <label for="preferred-contact" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Preferred Communication</label>
+                    <select name="preferred-contact" id="preferred-contact" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                      <option value="phone">Telephone Call</option>
+                      <option value="text">SMS Text Message</option>
+                      <option value="email" selected>Email Correspondence</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Time & Focus -->
+              <div class="space-y-4 pt-4">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/10 pb-2">02. Schedule Parameters</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div class="space-y-2">
+                    <label for="date" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Preferred Date *</label>
+                    <input type="date" name="date" id="date" required class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="time" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Preferred Hour *</label>
+                    <select name="time" id="time" required class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                      <option value="" disabled selected>Select Hour...</option>
+                      <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                      <option value="midday">Midday (12:00 PM - 3:00 PM)</option>
+                      <option value="afternoon">Afternoon (3:00 PM - 7:00 PM)</option>
+                    </select>
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="is-first-visit" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Have you visited us before?</label>
+                    <select name="is-first-visit" id="is-first-visit" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                      <option value="yes">Yes, I am a returning guest</option>
+                      <option value="no" selected>No, this is my first visit</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label for="treatment" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Desired Service / Focus *</label>
+                    <select name="treatment" id="treatment" required class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                      <option value="" disabled selected>Select a Service...</option>
+                      
+                      <optgroup label="Consultations & Special Inquiries" class="bg-brand-cream font-semibold text-brand-sage">
+                        <option value="free-consultation" class="text-brand-charcoal font-normal">Free Skin Diagnostic Consultation (FREE / 15-30 min)</option>
+                        <option value="peptides-iv-consult" class="text-brand-charcoal font-normal">Peptides & IV Drips Consultation (FREE / 15-30 min)</option>
+                        <option value="peels-consult" class="text-brand-charcoal font-normal">Clinical Peels Consultation (FREE / 15-30 min)</option>
+                      </optgroup>
+
+                      <optgroup label="Facials Menu" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="customized-facial" class="text-brand-charcoal font-normal">Customized Facial ($80 / 60 min)</option>
+                        <option value="express-facial" class="text-brand-charcoal font-normal">Express Facial ($65 / 30 min)</option>
+                        <option value="dermaplane" class="text-brand-charcoal font-normal">Dermaplane ($90 / 50 min)</option>
+                        <option value="dermaplane-express" class="text-brand-charcoal font-normal">Dermaplane Express ($65 / 30 min)</option>
+                        <option value="dermaplane-addon" class="text-brand-charcoal font-normal">Add-on Dermaplane to Service ($50)</option>
+                        <option value="oxygen-rx" class="text-brand-charcoal font-normal">Oxygen RX Facial ($125 / 60 min)</option>
+                        <option value="oxygen-acne-detox" class="text-brand-charcoal font-normal">Oxygen Acne Detox ($110 / 60 min)</option>
+                        <option value="carboxy-mask" class="text-brand-charcoal font-normal">Carboxy Mask Facial ($155 / 1.5 hrs)</option>
+                        <option value="four-layer-glow" class="text-brand-charcoal font-normal">4-Layer Glow Facial ($125 / 60 min)</option>
+                        <option value="coco-chocolate" class="text-brand-charcoal font-normal">COCO - Chocolate Facial ($125 / 60 min)</option>
+                        <option value="plume-facial" class="text-brand-charcoal font-normal">Plume Facial ($65 / 45 min)</option>
+                        <option value="mask-madness" class="text-brand-charcoal font-normal">Mask Madness Facial ($125 / 60 min)</option>
+                        <option value="princess-facial" class="text-brand-charcoal font-normal">Princess Facial ($45 / 30 min)</option>
+                      </optgroup>
+
+                      <optgroup label="Hydrafacial Hydrodermabrasion & CIT" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="hydro-base" class="text-brand-charcoal font-normal">Hydrafacial Hydrodermabrasion ($165 / 45 min)</option>
+                        <option value="hydro-signature" class="text-brand-charcoal font-normal">Signature Hydro Facial ($189 / 60 min)</option>
+                        <option value="hydro-deluxe" class="text-brand-charcoal font-normal">Deluxe Hydro Facial ($249 / 75 min)</option>
+                        <option value="hydro-premium" class="text-brand-charcoal font-normal">Premium Hydro Facial ($299 / 90 min)</option>
+                        <option value="microderm" class="text-brand-charcoal font-normal">Wet Tip Diamond Microdermabrasion ($175 / 60 min)</option>
+                        <option value="collagen-induction" class="text-brand-charcoal font-normal">Collagen Induction - CIT ($350+ / 75-90 min)</option>
+                        <option value="keravive" class="text-brand-charcoal font-normal">Keravive Scalp Treatment ($300+ / 60 min)</option>
+                      </optgroup>
+
+                      <optgroup label="Clinical Peels" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="peel-pumpkin" class="text-brand-charcoal font-normal">Pumpkin Peel (Antioxidant Enzyme Glow / Consult)</option>
+                        <option value="peel-berry" class="text-brand-charcoal font-normal">Berry Peel (Brightening Pigment Therapy / Consult)</option>
+                        <option value="peel-jessner" class="text-brand-charcoal font-normal">Jessner Peel (Deep Cellular Resurfacing / Consult)</option>
+                        <option value="peel-skin-reversal" class="text-brand-charcoal font-normal">Skin Reversal Peel (Signature Intensive / Consult)</option>
+                      </optgroup>
+
+                      <optgroup label="Body, Detox Saunas & Salt Cabin" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="infrared-sauna" class="text-brand-charcoal font-normal">Infrared Sauna Session ($30 / 45 min)</option>
+                        <option value="salt-cabin" class="text-brand-charcoal font-normal">Salt Cabin Session - Halotherapy ($30 / 45 min)</option>
+                        <option value="ionic-detox" class="text-brand-charcoal font-normal">Ionic Foot Detox ($35 / 30 min)</option>
+                        <option value="back-facial" class="text-brand-charcoal font-normal">Back Facial ($65 / 60 min)</option>
+                        <option value="body-plume" class="text-brand-charcoal font-normal">Body Treatment (Plume) ($105 / 75 min)</option>
+                        <option value="lymphatic" class="text-brand-charcoal font-normal">Lymphatic Treatment ($115+ / 60 min+)</option>
+                      </optgroup>
+
+                      <optgroup label="Lashes & Brows" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="lash-lift" class="text-brand-charcoal font-normal">Lash Lift ($65 / 45 min)</option>
+                        <option value="lash-tint" class="text-brand-charcoal font-normal">Lash Tint ($15 / 20 min)</option>
+                        <option value="brow-shaping" class="text-brand-charcoal font-normal">Brow Shaping ($35 / 30 min)</option>
+                        <option value="brow-lamination" class="text-brand-charcoal font-normal">Brow Lamination ($70 / 45 min)</option>
+                        <option value="brow-mapping" class="text-brand-charcoal font-normal">Brow Mapping, Wax & Tint ($75 / 60 min)</option>
+                      </optgroup>
+
+                      <optgroup label="Postiche Beauty Hair Solutions" class="bg-brand-cream font-semibold text-brand-gold">
+                        <option value="postiche-consult" class="text-brand-charcoal font-normal">Postiche Beauty Hair & Scalp Consultation (60 min)</option>
+                      </optgroup>
+                    </select>
+                    <p id="treatment-duration-tip" class="text-xs font-serif italic text-brand-sage hidden mt-2"></p>
+                  </div>
+
+                  <div class="space-y-2">
+                    <label for="preferred-specialist" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Preferred Specialist (Optional)</label>
+                    <select name="preferred-specialist" id="preferred-specialist" class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none text-brand-slate">
+                      <option value="first-available" selected>First Available Esthetician</option>
+                      <option value="amy-fry">Amy Fry, LE (Founder & Clinical Director)</option>
+                      <option value="trysta-fry">Trysta Fry, LE (Licensed Esthetician)</option>
+                      <option value="paityn-drage">Paityn Drage, LE (Licensed Esthetician)</option>
+                    </select>
+                    <p class="text-[11px] text-brand-slate font-light mt-1">Leave as default to schedule with any of our certified team members.</p>
+                  </div>
+                </div>
+
+              <!-- Section 3: Skincare Details -->
+              <div class="space-y-4 pt-4">
+                <h3 class="text-xs tracking-widest text-brand-gold uppercase font-bold border-b border-brand-gold/10 pb-2">03. Skin Profile</h3>
+                
+                <div class="space-y-2">
+                  <label for="message" class="text-xs uppercase tracking-widest text-brand-slate font-medium">Describe your skin goals or specific concerns</label>
+                  <textarea name="message" id="message" rows="4" placeholder="Mention skin dry patches, active sensitivity, scalp tightness, or detailed custom wig styling requests..." class="w-full bg-brand-cream border border-brand-gold/20 focus:border-brand-sage focus:outline-none px-4 py-3 text-sm transition duration-300 rounded-none"></textarea>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button type="submit" class="w-full btn-gold py-4 text-xs font-semibold tracking-[0.2em] transition duration-300 rounded-none shadow-md">
+                  Submit Reservation Request
+                </button>
+                <div id="form-result" class="hidden mt-4 transition duration-300"></div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Sidebar Details & FAQ Right -->
+        <div class="lg:col-span-4 space-y-10 reveal-right delay-200">
+          
+          <!-- Call Reception Card -->
+          <div class="bg-brand-sage-light/35 border border-brand-gold/15 p-8 space-y-6">
+            <h3 class="text-xl font-serif text-brand-charcoal">Phone Concierge</h3>
+            <p class="text-brand-slate text-xs font-light leading-relaxed">
+              For direct bookings or private Postiche Beauty fittings, please call our reception line.
+            </p>
+            
+            <div class="space-y-4">
+              <a href="tel:+12179941048" class="flex items-center group transition duration-300" id="sidebar-booking-phone">
+                <div class="w-10 h-10 bg-brand-cream border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-sage transition duration-300">
+                  <svg class="w-4 h-4 text-brand-charcoal group-hover:text-brand-cream transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-[9px] uppercase tracking-widest text-brand-slate font-semibold">Call Our Receptionist</p>
+                  <p class="text-sm text-brand-charcoal font-semibold">+1 (217) 994-1048</p>
+                </div>
+              </a>
+
+              <div class="flex items-center">
+                <div class="w-10 h-10 bg-brand-cream border border-brand-gold/20 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-brand-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-[9px] uppercase tracking-widest text-brand-slate font-semibold">Secure Clinic Email</p>
+                  <p class="text-xs text-brand-charcoal font-semibold">concierge@skinreversalclinic.com</p>
+                </div>
+              </div>
+
+              <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center group transition duration-300" id="sidebar-booking-facebook">
+                <div class="w-10 h-10 bg-brand-cream border border-brand-gold/20 flex items-center justify-center group-hover:bg-brand-sage transition duration-300">
+                  <svg class="w-4 h-4 text-brand-charcoal group-hover:text-brand-cream transition duration-300 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-[9px] uppercase tracking-widest text-brand-slate font-semibold">Facebook Page</p>
+                  <p class="text-xs text-brand-charcoal font-semibold group-hover:text-brand-gold-dark transition duration-300">@SkinReversal</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Booking FAQ -->
+          <div class="space-y-6">
+            <h3 class="text-lg font-serif text-brand-charcoal uppercase tracking-wider">Booking Guidelines</h3>
+            
+            <div class="space-y-4">
+              
+              <div class="space-y-1">
+                <h4 class="text-xs uppercase tracking-wider text-brand-charcoal font-semibold">What is the cancellation policy?</h4>
+                <p class="text-brand-slate text-[11px] font-light leading-relaxed">
+                  Please provide 24 hours notice for rescheduling. Late cancellations may incur a 50% fee.
+                </p>
+              </div>
+
+              <div class="space-y-1">
+                <h4 class="text-xs uppercase tracking-wider text-brand-charcoal font-semibold">How should I prepare?</h4>
+                <p class="text-brand-slate text-[11px] font-light leading-relaxed">
+                  Arrive 10 minutes early. For clinical cleanings, avoid active acids for 48 hours prior.
+                </p>
+              </div>
+
+              <div class="space-y-1">
+                <h4 class="text-xs uppercase tracking-wider text-brand-charcoal font-semibold">Are consultations free?</h4>
+                <p class="text-brand-slate text-[11px] font-light leading-relaxed">
+                  Yes, our skincare and scalp consultations are completely free.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Image Right -->
+          <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm h-64 w-full">
+            <img src="images/skincare_products.jpg" alt="Skin Reversal elegant Sanctuary Lounge cosmetic presentation" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/30 via-transparent to-transparent opacity-40"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/15 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Brand column -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-serif tracking-[0.2em] text-brand-cream uppercase font-medium">SKIN REVERSAL</h4>
+        <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+          A clinical skincare spa restoring skin vitality, scalp wellness, and confidence with biocompatible botanical therapies.
+        </p>
+        <div class="pt-2">
+          <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2.5 text-xs text-brand-gold hover:text-white transition duration-300 group" aria-label="Visit Skin Reversal on Facebook">
+            <span class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/20 transition duration-300">
+              <svg class="w-4 h-4 fill-current text-brand-gold group-hover:text-white transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </span>
+            <span class="tracking-widest uppercase text-[11px] font-medium">Follow on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Treatments</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="services.html#facials" class="hover:text-brand-gold transition duration-300">Facials & O2 Hydrofacials</a></li>
+          <li><a href="services.html#body-treatments" class="hover:text-brand-gold transition duration-300">Detox Saunas & Cabins</a></li>
+          <li><a href="services.html#lashes-brows" class="hover:text-brand-gold transition duration-300">Lashes & Brows</a></li>
+          <li><a href="services.html#pricing-list" class="hover:text-brand-gold transition duration-300">Complete Pricing Menu</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick links column 2 -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Clinic Lounges</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="about.html#clinic-philosophy" class="hover:text-brand-gold transition duration-300">Philosophy</a></li>
+          <li><a href="about.html#clinic-founders" class="hover:text-brand-gold transition duration-300">Expert Estheticians</a></li>
+          <li><a href="book.html" class="hover:text-brand-gold transition duration-300">Reservation Guidelines</a></li>
+          <li><a href="tel:+12179941048" class="hover:text-brand-gold transition duration-300">Direct Reception Line</a></li>
+        </ul>
+      </div>
+
+      <!-- Locations & hours column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">The Sanctuary</h5>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          1212 N 8th St<br>
+          Vandalia, IL 62471
+        </p>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          <span class="text-brand-gold">T:</span> +1 (217) 994-1048<br>
+          <span class="text-brand-gold">E:</span> concierge@skinreversalclinic.com<br>
+          <span class="text-brand-gold">FB:</span> <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition duration-300">facebook.com/SkinReversal</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Trust badges and copyright -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] tracking-wider text-gray-400 uppercase">
+      
+      <!-- Trust badges -->
+      <div class="flex items-center space-x-6">
+        <span>✦ Bio-Compatible Products</span>
+        <span>✦ Private Consult Lounges</span>
+        <span>✦ Board Certified Estheticians</span>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <p>&copy; 2026 Skin Reversal. All Rights Reserved. Custom Design for Skin & Scalp Synergy.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Global scripts -->
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "skin-reversal-clinic",
+  "version": "1.0.0",
+  "description": "Skin Reversal - Premium Skincare Clinic & Skin Longevity Spa",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

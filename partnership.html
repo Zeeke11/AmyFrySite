@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postiche Beauty Hair & Scalp Partnership | Skin Reversal Clinic</title>
+  <meta name="description" content="Discover our luxury alliance with Postiche Beauty. Offering customized, lightweight, premium wigs and toppers integrated with advanced scalp & skin restoration.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FFF0F2',
+              sage: '#7D8C76',
+              'sage-light': '#E8EBE6',
+              'sage-dark': '#5C6A56',
+              charcoal: '#1C1F1D',
+              slate: '#4E534F',
+              gold: '#FFB6C1',
+              'gold-dark': '#D38496'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-cream text-brand-charcoal flex flex-col min-h-screen">
+
+  <!-- --- NAVIGATION BAR --- -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2 group" id="nav-logo">
+        <span class="text-2xl font-serif text-brand-charcoal tracking-[0.2em] font-medium transition duration-300 group-hover:text-brand-sage">SKIN REVERSAL</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium">
+        <a href="index.html" class="nav-link text-brand-slate py-1" id="link-home">Home</a>
+        <a href="about.html" class="nav-link text-brand-slate py-1" id="link-about">About</a>
+        <a href="services.html" class="nav-link text-brand-slate py-1" id="link-services">Services</a>
+        <a href="partnership.html" class="nav-link text-brand-slate py-1" id="link-partnership">Postiche Beauty</a>
+      </nav>
+
+      <!-- Action CTAs -->
+      <div class="hidden md:flex items-center space-x-6">
+        <!-- Call Receptionist Link -->
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300" id="header-phone-cta">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Give us a call
+        </a>
+        <!-- Facebook Link -->
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300 group" id="header-facebook-cta" title="Visit Skin Reversal on Facebook" aria-label="Visit Skin Reversal on Facebook">
+          <svg class="w-4 h-4 fill-current text-brand-sage group-hover:text-brand-gold transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="book.html" class="btn-gold py-3 px-6 text-xs transition duration-300 font-semibold" id="header-book-cta">Book Consultation</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="md:hidden flex items-center p-2 text-brand-charcoal focus:outline-none" id="mobile-menu-btn" aria-expanded="false" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden flex-col bg-brand-cream border-t border-brand-gold/10 px-6 py-6 space-y-4 shadow-inner" id="mobile-menu">
+      <a href="index.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Home</a>
+      <a href="about.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">About</a>
+      <a href="services.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Services</a>
+      <a href="partnership.html" class="nav-link text-sm tracking-widest uppercase font-medium text-brand-slate py-2">Postiche Beauty</a>
+      <div class="pt-4 border-t border-brand-gold/10 flex flex-col space-y-4">
+        <a href="tel:+12179941048" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal">
+          <svg class="w-4 h-4 mr-2 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+          Call Our Receptionist
+        </a>
+        <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="flex items-center text-xs tracking-widest uppercase font-medium text-brand-charcoal hover:text-brand-gold transition duration-300">
+          <svg class="w-4 h-4 mr-2 text-brand-sage fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook Page
+        </a>
+        <a href="book.html" class="btn-gold py-3 text-center text-xs w-full">Book Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- --- PAGE HEADER --- -->
+    <section class="py-16 md:py-24 border-b border-brand-gold/10 bg-brand-sage-light/20" id="partnership-intro">
+      <div class="max-w-4xl mx-auto px-6 text-center reveal-on-scroll">
+        <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Exquisite Harmony</span>
+        <h1 class="text-4xl md:text-6xl font-light font-serif text-brand-charcoal mt-4 mb-6">Skin Reversal × Postiche Beauty</h1>
+        <p class="text-brand-slate text-base md:text-lg leading-relaxed font-light max-w-2xl mx-auto">
+          An exclusive partnership bridging scientific dermal longevity with the custom-crafted hair solutions of Postiche Beauty.
+        </p>
+      </div>
+    </section>
+
+    <!-- --- NARRATIVE SECTION: SKIN & SCALP SYNERGY --- -->
+    <section class="py-24" id="scalp-synergy">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Text Blocks Left -->
+        <div class="lg:col-span-6 space-y-6 reveal-left">
+          <span class="text-xs tracking-[0.25em] text-brand-gold uppercase font-semibold">An Integrated Philosophy</span>
+          <h2 class="text-3xl font-light font-serif text-brand-charcoal">The scalp is skin, restored in absolute unison.</h2>
+          <p class="text-brand-slate text-sm font-light leading-relaxed">
+            Thinning and scalp inflammation are often connected to dermal fatigue. Combining **Skin Reversal's** clinical face cleanings with the premium hair solutions of **Postiche Beauty** restores confidence and comfort.
+          </p>
+          <p class="text-brand-slate text-sm font-light leading-relaxed">
+            Our dual-focus method nourishes scalp tissue, improving hair piece comfort while keeping surrounding facial skin rejuvenated.
+          </p>
+          
+          <div class="pt-4 grid grid-cols-2 gap-4 border-t border-brand-gold/10">
+            <div>
+              <span class="text-2xl font-serif text-brand-sage block">100%</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-slate">Premium Remy Human Hair</span>
+            </div>
+            <div>
+              <span class="text-2xl font-serif text-brand-sage block">Ultra-Light</span>
+              <span class="text-[10px] uppercase tracking-wider text-brand-slate">Medical-Grade Breathable Caps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Right: Postiche Restorative Skincare -->
+        <div class="lg:col-span-6 reveal-right delay-200">
+          <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm">
+            <img src="images/postiche_enzyme_polish_lips.jpg" alt="Postiche Beauty Enzyme Face Polish and Hydra Lips clinical formulations" class="w-full h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/50 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute bottom-4 left-4 text-brand-cream z-10">
+              <span class="text-[9px] uppercase tracking-[0.2em] text-brand-gold font-semibold block mb-0.5">Dermal & Lip Synergy</span>
+              <span class="text-lg font-serif italic tracking-wide font-light">Enzyme Face Polish & Hydra Lips</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- POSTICHE COLLECTION SHOWCASE --- -->
+    <section class="py-24 bg-brand-sage-light/30 border-y border-brand-gold/10" id="collection-showcase">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold mb-3">Our Offerings</span>
+          <h2 class="text-4xl font-light text-brand-charcoal font-serif">The Postiche Beauty Collection</h2>
+          <p class="text-brand-slate text-sm font-light mt-4">Premium custom-fitted hair solutions. Pieces are $150 and up.</p>
+          <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Item 1 -->
+          <div class="glass-card p-8 flex flex-col justify-between h-full reveal-on-scroll delay-100">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-60 w-full mb-6 group">
+                <img src="images/hand_tied_wigs_display.jpg" alt="Luxury hand-tied wigs and toppers boutique display" class="w-full h-full object-cover object-[center_35%] transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-2xl font-serif text-brand-charcoal mb-3">Hand-Tied Wigs</h3>
+              <p class="text-brand-slate text-sm font-light leading-relaxed mb-6">
+                Lightweight French lace wigs with hand-knotted fibers and medical-grade breathability for sensitive scalps.
+              </p>
+            </div>
+            <span class="text-xs tracking-widest uppercase font-semibold text-brand-gold block border-t border-brand-gold/10 pt-4 mt-auto">Wigs from $150 & up</span>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="glass-card p-8 flex flex-col justify-between h-full reveal-on-scroll delay-200">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-60 w-full mb-6 group bg-brand-cream">
+                <img src="images/custom_toppers.jpg" alt="Custom hair toppers and volume setups display" class="w-full h-full object-cover object-[25%_center] transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-2xl font-serif text-brand-charcoal mb-3">Custom Toppers & Setups</h3>
+              <p class="text-brand-slate text-sm font-light leading-relaxed mb-6">
+                Featherweight hair toppers and full setups designed to blend with your natural hair line and add volume.
+              </p>
+            </div>
+            <span class="text-xs tracking-widest uppercase font-semibold text-brand-gold block border-t border-brand-gold/10 pt-4 mt-auto">Pieces from $150 & up</span>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="glass-card p-8 flex flex-col justify-between h-full reveal-on-scroll delay-300">
+            <div>
+              <div class="relative overflow-hidden rounded-sm shadow-sm h-60 w-full mb-6 group">
+                <img src="images/spa_treatment_room.jpg" alt="Clinical scalp therapeutic equipment and setup" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-brand-charcoal/10"></div>
+              </div>
+              <h3 class="text-2xl font-serif text-brand-charcoal mb-3">Bio-Regen Scalp Therapy</h3>
+              <p class="text-brand-slate text-sm font-light leading-relaxed mb-6">
+                Follicle stimulation, botanical scalp exfoliation, and laser therapies to promote healthy hair growth.
+              </p>
+            </div>
+            <span class="text-xs tracking-widest uppercase font-semibold text-brand-gold block border-t border-brand-gold/10 pt-4 mt-auto">Dermal Activation</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- THE PRIVATE fitting SERVICE --- -->
+    <section class="py-24" id="private-fitting">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        
+        <!-- Image Left -->
+        <div class="lg:col-span-6 order-2 lg:order-1 reveal-left">
+          <div class="relative overflow-hidden group shadow-md border border-brand-gold/15 rounded-sm">
+            <img src="images/wig_salon.jpg" alt="Discretion-oriented private Postiche styling and fitting boutique suite" class="w-full h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/30 via-transparent to-transparent opacity-40"></div>
+          </div>
+        </div>
+
+        <!-- Content Right -->
+        <div class="lg:col-span-6 order-1 lg:order-2 space-y-6 reveal-right delay-200">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Absolute Confidentiality</span>
+          <h2 class="text-4xl font-light font-serif text-brand-charcoal leading-tight">Private, compassionate fittings.</h2>
+          <p class="text-brand-slate text-sm font-light leading-relaxed">
+            Our private suites provide locked doors and professional vanity lighting for absolute discretion. Julian Mercer custom-matches colors and densities to replicate your style.
+          </p>
+          
+          <div class="pt-6 flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="book.html" class="btn-gold py-4 px-8 text-xs text-center font-semibold tracking-widest" id="fitting-book-cta">Request Private Fitting</a>
+            <a href="tel:+12179941048" class="btn-outline-sage py-4 px-8 text-xs text-center font-semibold tracking-widest flex items-center justify-center space-x-2" id="fitting-phone-cta">
+              <svg class="w-4 h-4 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              <span>Give us a call</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- DUAL RESTORATION PACKAGES --- -->
+    <section class="py-24 bg-brand-sage-light/20 border-t border-brand-gold/10" id="dual-packages">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center mb-16 reveal-on-scroll">
+          <span class="text-xs tracking-[0.3em] text-brand-gold uppercase font-semibold">Integrated Packages</span>
+          <h2 class="text-3xl font-light font-serif text-brand-charcoal mt-2">Dermal & Hair Synergy Packages</h2>
+          <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="space-y-8">
+          
+          <!-- Package 1 -->
+          <div class="bg-brand-cream border border-brand-gold/15 p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 reveal-on-scroll delay-100">
+            <div class="space-y-3 max-w-xl">
+              <span class="text-xs tracking-widest text-brand-gold uppercase font-bold">Comprehensive Renewal</span>
+              <h3 class="text-2xl font-serif text-brand-charcoal">The Aura Synergy Package</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Includes two face cleanings, a peptide peel, a private scalp assessment, and styling for a Postiche Beauty topper or wig.
+              </p>
+            </div>
+            <div class="text-left md:text-right border-l md:border-l-0 md:border-r border-brand-gold/20 pl-6 md:pl-0 md:pr-6 min-w-[150px]">
+              <span class="text-xs text-brand-slate font-medium block">Duration: 2 Visits</span>
+              <span class="text-2xl font-serif text-brand-charcoal font-medium block mt-1">$450</span>
+              <a href="book.html" class="text-[10px] tracking-widest text-brand-gold uppercase font-bold hover:text-brand-charcoal block mt-3">Book Aura Package →</a>
+            </div>
+          </div>
+
+          <!-- Package 2 -->
+          <div class="bg-brand-cream border border-brand-gold/15 p-8 md:p-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 reveal-on-scroll delay-200">
+            <div class="space-y-3 max-w-xl">
+              <span class="text-xs tracking-widest text-brand-gold uppercase font-bold">Medical Restoration Support</span>
+              <h3 class="text-2xl font-serif text-brand-charcoal">The Solace Restore Program</h3>
+              <p class="text-brand-slate text-xs font-light leading-relaxed">
+                Includes three signature facials, monthly scalp therapies, and custom wig fitting.
+              </p>
+            </div>
+            <div class="text-left md:text-right border-l md:border-l-0 md:border-r border-brand-gold/20 pl-6 md:pl-0 md:pr-6 min-w-[150px]">
+              <span class="text-xs text-brand-slate font-medium block">Duration: 3 Months</span>
+              <span class="text-2xl font-serif text-brand-charcoal font-medium block mt-1">$720</span>
+              <a href="book.html" class="text-[10px] tracking-widest text-brand-gold uppercase font-bold hover:text-brand-charcoal block mt-3">Book Solace Package →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- --- FOOTER --- -->
+  <footer class="bg-brand-charcoal text-brand-cream border-t border-brand-gold/15 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      
+      <!-- Brand column -->
+      <div class="space-y-4">
+        <h4 class="text-xl font-serif tracking-[0.2em] text-brand-cream uppercase font-medium">SKIN REVERSAL</h4>
+        <p class="text-gray-400 text-xs font-light leading-relaxed max-w-xs">
+          A clinical skincare spa restoring skin vitality, scalp wellness, and confidence with biocompatible botanical therapies.
+        </p>
+        <div class="pt-2">
+          <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2.5 text-xs text-brand-gold hover:text-white transition duration-300 group" aria-label="Visit Skin Reversal on Facebook">
+            <span class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/20 transition duration-300">
+              <svg class="w-4 h-4 fill-current text-brand-gold group-hover:text-white transition duration-300" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </span>
+            <span class="tracking-widest uppercase text-[11px] font-medium">Follow on Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Treatments</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="services.html#facials" class="hover:text-brand-gold transition duration-300">Facials & O2 Hydrofacials</a></li>
+          <li><a href="services.html#body-treatments" class="hover:text-brand-gold transition duration-300">Detox Saunas & Cabins</a></li>
+          <li><a href="services.html#lashes-brows" class="hover:text-brand-gold transition duration-300">Lashes & Brows</a></li>
+          <li><a href="services.html#pricing-list" class="hover:text-brand-gold transition duration-300">Complete Pricing Menu</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick links column 2 -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Clinic Lounges</h5>
+        <ul class="space-y-2 text-xs text-gray-400 font-light">
+          <li><a href="about.html#clinic-philosophy" class="hover:text-brand-gold transition duration-300">Philosophy</a></li>
+          <li><a href="about.html#clinic-founders" class="hover:text-brand-gold transition duration-300">Expert Estheticians</a></li>
+          <li><a href="book.html" class="hover:text-brand-gold transition duration-300">Reservation Guidelines</a></li>
+          <li><a href="tel:+12179941048" class="hover:text-brand-gold transition duration-300">Direct Reception Line</a></li>
+        </ul>
+      </div>
+
+      <!-- Locations & hours column -->
+      <div class="space-y-4">
+        <h5 class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">The Sanctuary</h5>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          1212 N 8th St<br>
+          Vandalia, IL 62471
+        </p>
+        <p class="text-xs text-gray-400 font-light leading-relaxed">
+          <span class="text-brand-gold">T:</span> +1 (217) 994-1048<br>
+          <span class="text-brand-gold">E:</span> concierge@skinreversalclinic.com<br>
+          <span class="text-brand-gold">FB:</span> <a href="https://www.facebook.com/SkinReversal" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition duration-300">facebook.com/SkinReversal</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Trust badges and copyright -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 border-t border-brand-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-[10px] tracking-wider text-gray-400 uppercase">
+      
+      <!-- Trust badges -->
+      <div class="flex items-center space-x-6">
+        <span>✦ Bio-Compatible Products</span>
+        <span>✦ Private Consult Lounges</span>
+        <span>✦ Board Certified Estheticians</span>
+      </div>
+
+      <!-- Copyright -->
+      <div>
+        <p>&copy; 2026 Skin Reversal. All Rights Reserved. Custom Design for Skin & Scalp Synergy.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Global scripts -->
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>
